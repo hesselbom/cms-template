@@ -6,11 +6,40 @@
         </Hesselbom_CmsTemplate>
     </modules>
     <global>
+        <resources>
+            <cmstemplate_setup>
+                <setup><module>Hesselbom_CmsTemplate</module></setup>
+                <connection><use>core_setup</use></connection>
+            </cmstemplate_setup>
+        </resources>
         <blocks>
             <cmstemplate>
                 <class>Hesselbom_CmsTemplate_Block</class>
             </cmstemplate>
         </blocks>
+        <models>
+            <cmstemplate>
+                <class>Hesselbom_CmsTemplate_Model</class>
+                <resourceModel>cmstemplate_mysql4</resourceModel>
+            </cmstemplate>
+            <cmstemplate_mysql4>
+                <class>Hesselbom_CmsTemplate_Model_Mysql4</class>
+                <entities>
+                    <page>
+                        <table>cmstemplate_page</table>
+                    </page>
+                    <page_data>
+                        <table>cmstemplate_page_data</table>
+                    </page_data>
+                    <block>
+                        <table>cmstemplate_block</table>
+                    </block>
+                    <block_data>
+                        <table>cmstemplate_block_data</table>
+                    </block_data>
+                </entities>
+            </cmstemplate_mysql4>
+        </models>
     </global>
     <adminhtml>
         <layout>

@@ -8,6 +8,7 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
     {
         /** @var $model Mage_Cms_Model_Page */
         $model = Mage::registry('cms_page');
+        $template = Mage::getModel('cmstemplate/page')->load($model->getId(), 'cms_page_id');
 
         /*
          * Checking if user have permissions to save information
@@ -35,8 +36,12 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
             'name'      => 'template',
             'label'     => Mage::helper('cms')->__('Template'),
             'title'     => Mage::helper('cms')->__('Template'),
-            'value'     => 'Test{{Test:textarea}}{{Titel}}',
+            'value'     => $template->getData('data'),
             'disabled'  => $isElementDisabled,
+        ));
+
+        $template_fieldset->addField('loaded_data', 'hidden', array(
+            'value'     => Mage::helper('core')->jsonEncode(array('test' => 'Hello')),
         ));
 
         $template_fieldset->addField('update_template', 'button', array(

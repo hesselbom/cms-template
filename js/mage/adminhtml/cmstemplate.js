@@ -2,7 +2,7 @@ document.observe('dom:loaded', function() {
     var content_table = $$('#page_cmstemplate_content_fieldset table tbody')[0],
         ids = [],
         no_fields_row = content_table.down('tr'),
-        data = [];
+        data = $('page_loaded_data').value.evalJSON(true);
 
     analyseText($('page_template').value);
 
