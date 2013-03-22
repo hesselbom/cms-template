@@ -1,0 +1,11 @@
+<config>
+    <modules>
+        <Hesselbom_CmsTemplate>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Adminhtml/>
+            </depends>
+        </Hesselbom_CmsTemplate>
+    </modules>
+</config>

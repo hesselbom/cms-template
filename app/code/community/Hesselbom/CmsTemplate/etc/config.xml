@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Hesselbom_CmsTemplate>
+            <version>0.0.1</version>
+        </Hesselbom_CmsTemplate>
+    </modules>
+    <global>
+        <blocks>
+            <cmstemplate>
+                <class>Hesselbom_CmsTemplate_Block</class>
+            </cmstemplate>
+        </blocks>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <cmstemplate>
+                    <file>cmstemplate.xml</file>
+                </cmstemplate>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

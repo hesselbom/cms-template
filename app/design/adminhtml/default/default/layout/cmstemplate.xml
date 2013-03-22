@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_cms_page_edit>
+        <reference name="head">
+            <action method="addJs"><script>mage/adminhtml/cmstemplate.js</script></action>
+        </reference>
+        <reference name="cms_page_edit_tabs">
+            <block type="cmstemplate/adminhtml_cms_tab" name="cmstemplate_tab" />
+            <action method="addTab">
+                <name>cmstemplate_section</name>
+                <block>cmstemplate_tab</block>
+            </action>
+        </reference>
+    </adminhtml_cms_page_edit>
+</layout>
