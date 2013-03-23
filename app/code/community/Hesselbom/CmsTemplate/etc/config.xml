@@ -12,6 +12,11 @@
                 <connection><use>core_setup</use></connection>
             </cmstemplate_setup>
         </resources>
+        <helpers>
+            <cmstemplate>
+                <class>Hesselbom_CmsTemplate_Helper</class>
+            </cmstemplate>
+        </helpers>
         <blocks>
             <cmstemplate>
                 <class>Hesselbom_CmsTemplate_Block</class>
@@ -69,5 +74,31 @@
                 </observers>
             </cms_page_save_after>
         </events>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <cmstemplate>
+                                            <title>CMS Template Section</title>
+                                        </cmstemplate>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
     </adminhtml>
+    <default>
+       <cmstemplate>
+            <cms_page>
+                <hide_content_tab>1</hide_content_tab>
+            </cms_page>
+        </cmstemplate>
+    </default>
 </config>

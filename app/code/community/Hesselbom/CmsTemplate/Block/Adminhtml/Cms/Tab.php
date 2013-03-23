@@ -4,6 +4,16 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
     extends Mage_Adminhtml_Block_Widget_Form
     implements Mage_Adminhtml_Block_Widget_Tab_Interface
 {
+    protected function _prepareLayout()
+    {
+        if (Mage::getStoreConfig('cmstemplate/cms_page/hide_content_tab', 1)) {
+            $this
+                ->getLayout()
+                ->getBlock('cms_page_edit_tabs')
+                ->removeTab('content_section');
+        }
+    }
+
     protected function _prepareForm()
     {
         /** @var $model Mage_Cms_Model_Page */
