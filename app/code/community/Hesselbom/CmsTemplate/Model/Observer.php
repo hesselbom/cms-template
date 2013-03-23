@@ -2,13 +2,30 @@
 
 class Hesselbom_CmsTemplate_Model_Observer
 {
-    public function saveCmsPageData($observer)
+    public function setCmsPageContent($observer)
+    {
+        // Set CMS content based on template and template data
+        $content = $observer->getDataObject()->getData('template');
+        $data = array();
+        foreach ($observer->getDataObject()->getData() as $key=>$value) {
+            if (preg_match('/^cmstemplate_([A-Za-z0-9]+)/', $key, $matches)) {
+                $data[$matches[1]] = $value;
+            }
+        }
+        $observer
+            ->getDataObject()
+            ->setContent(Mage::getSingleton('cmstemplate/page')
+                ->generateContent($content, $data));
+    }
+
+    public function saveCmsPageTemplate($observer)
     {
         $page_id = $observer->getDataObject()->getPageId();
+        $content = $observer->getDataObject()->getData('template');
         $template = Mage::getModel('cmstemplate/page')
             ->load($page_id, 'cms_page_id')
             ->setCmsPageId($page_id)
-            ->setData('data', $observer->getDataObject()->getData('template'))
+            ->setContent($content)
             ->save();
 
         // Remove old data

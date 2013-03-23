@@ -39,7 +39,7 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
             'name'      => 'template',
             'label'     => Mage::helper('cms')->__('Template'),
             'title'     => Mage::helper('cms')->__('Template'),
-            'value'     => $template->getData('data'),
+            'value'     => $template->getContent(),
             'disabled'  => $isElementDisabled,
         ));
 

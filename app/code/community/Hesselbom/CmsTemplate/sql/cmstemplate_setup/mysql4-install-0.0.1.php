@@ -19,7 +19,7 @@ $cmstemplate_page = $connection->newTable( $installer->getTable('cmstemplate/pag
         'unsigned' => true,
         'nullable' => false,
         ))
-    ->addColumn('data', Varien_Db_Ddl_Table::TYPE_TEXT);
+    ->addColumn('content', Varien_Db_Ddl_Table::TYPE_TEXT);
 
 $cmstemplate_page_data = $connection->newTable( $installer->getTable('cmstemplate/page_data') )
     ->addColumn('cmstemplate_data_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
@@ -46,7 +46,7 @@ $cmstemplate_block = $connection->newTable( $installer->getTable('cmstemplate/bl
         'unsigned' => true,
         'nullable' => false,
         ))
-    ->addColumn('data', Varien_Db_Ddl_Table::TYPE_TEXT);
+    ->addColumn('content', Varien_Db_Ddl_Table::TYPE_TEXT);
 
 $cmstemplate_block_data = $connection->newTable( $installer->getTable('cmstemplate/block_data') )
     ->addColumn('cmstemplate_data_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
