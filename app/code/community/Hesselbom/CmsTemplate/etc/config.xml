@@ -49,5 +49,16 @@
                 </cmstemplate>
             </updates>
         </layout>
+        <events>
+            <cms_page_save_after>
+                <observers>
+                    <cmstemplate_save_product_data>
+                        <type>singleton</type>
+                        <class>cmstemplate/observer</class>
+                        <method>saveCmsPageData</method>
+                    </cmstemplate_save_product_data>
+                </observers>
+            </cms_page_save_after>
+        </events>
     </adminhtml>
 </config>
