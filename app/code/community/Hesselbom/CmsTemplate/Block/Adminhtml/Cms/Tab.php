@@ -50,6 +50,7 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
             'label'     => Mage::helper('cms')->__('Template'),
             'title'     => Mage::helper('cms')->__('Template'),
             'value'     => $template->getContent() ? $template->getContent() : $model->getContent(),
+            'required'  => Mage::getStoreConfig('cmstemplate/cms_page/hide_content_tab', 1),
             'disabled'  => $isElementDisabled,
         ));
 
