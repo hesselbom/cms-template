@@ -79,12 +79,12 @@ class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
 
     public function getTabLabel()
     {
-        return $this->__('Template');
+        return Mage::getStoreConfig('cmstemplate/cms_page/cmstemplate_tab_label', 1);
     }
 
     public function getTabTitle()
     {
-        return $this->__('Template');
+        return Mage::getStoreConfig('cmstemplate/cms_page/cmstemplate_tab_label', 1);
     }
 
     public function canShowTab()

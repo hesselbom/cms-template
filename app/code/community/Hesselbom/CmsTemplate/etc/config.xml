@@ -98,6 +98,7 @@
        <cmstemplate>
             <cms_page>
                 <hide_content_tab>1</hide_content_tab>
+                <cmstemplate_tab_label>Content</cmstemplate_tab_label>
             </cms_page>
         </cmstemplate>
     </default>
