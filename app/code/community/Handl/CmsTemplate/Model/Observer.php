@@ -1,6 +1,6 @@
 <?php
 
-class Hesselbom_CmsTemplate_Model_Observer
+class Handl_CmsTemplate_Model_Observer
 {
     public function setCmsPageContent($observer)
     {

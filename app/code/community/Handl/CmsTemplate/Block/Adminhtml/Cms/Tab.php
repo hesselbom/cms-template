@@ -1,6 +1,6 @@
 <?php
 
-class Hesselbom_CmsTemplate_Block_Adminhtml_Cms_Tab
+class Handl_CmsTemplate_Block_Adminhtml_Cms_Tab
     extends Mage_Adminhtml_Block_Widget_Form
     implements Mage_Adminhtml_Block_Widget_Tab_Interface
 {

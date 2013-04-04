@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <Hesselbom_CmsTemplate>
+        <Handl_CmsTemplate>
             <version>0.0.1</version>
-        </Hesselbom_CmsTemplate>
+        </Handl_CmsTemplate>
     </modules>
     <global>
         <resources>
             <cmstemplate_setup>
-                <setup><module>Hesselbom_CmsTemplate</module></setup>
+                <setup><module>Handl_CmsTemplate</module></setup>
                 <connection><use>core_setup</use></connection>
             </cmstemplate_setup>
         </resources>
         <helpers>
             <cmstemplate>
-                <class>Hesselbom_CmsTemplate_Helper</class>
+                <class>Handl_CmsTemplate_Helper</class>
             </cmstemplate>
         </helpers>
         <blocks>
             <cmstemplate>
-                <class>Hesselbom_CmsTemplate_Block</class>
+                <class>Handl_CmsTemplate_Block</class>
             </cmstemplate>
         </blocks>
         <models>
             <cmstemplate>
-                <class>Hesselbom_CmsTemplate_Model</class>
+                <class>Handl_CmsTemplate_Model</class>
                 <resourceModel>cmstemplate_mysql4</resourceModel>
             </cmstemplate>
             <cmstemplate_mysql4>
-                <class>Hesselbom_CmsTemplate_Model_Mysql4</class>
+                <class>Handl_CmsTemplate_Model_Mysql4</class>
                 <entities>
                     <page>
                         <table>cmstemplate_page</table>

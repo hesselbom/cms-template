@@ -1,6 +1,6 @@
 <?php
 
-class Hesselbom_CmsTemplate_Model_Page extends Hesselbom_CmsTemplate_Model_Abstract
+class Handl_CmsTemplate_Model_Page extends Handl_CmsTemplate_Model_Abstract
 {
     protected function _construct()
     {
